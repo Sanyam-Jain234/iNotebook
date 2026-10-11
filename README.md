@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# iNotebook — Cloud-Based Notes App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+iNotebook is a full-stack web application that allows users to securely create, manage, and organize their personal notes. Users can sign up, log in, and access their notes through an authenticated account.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- User registration and login
+- Password hashing using bcrypt
+- JWT-based authentication
+- Create, view, update, and delete notes
+- Protected API routes
+- Responsive React user interface
+- MongoDB database integration
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Frontend:** React.js, React Router, CSS
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**Backend:** Node.js, Express.js
 
-### `npm test`
+**Database:** MongoDB, Mongoose
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Authentication:** JSON Web Tokens (JWT), bcrypt.js
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Node.js and npm
+- MongoDB running locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1. Clone the repository
 
-### `npm run eject`
+```bash
+git clone https://github.com/Sanyam-Jain234/iNotebook.git
+cd iNotebook
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 2. Install frontend dependencies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 3. Install backend dependencies
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm install --prefix backend
+```
 
-## Learn More
+### 4. Configure environment variables
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Create a `.env` file inside the `backend` directory:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```env
+JWT_SECRET=your_new_random_secret
+```
 
-### Code Splitting
+Use your own strong random secret. Never commit this file to GitHub.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 5. Start the application
 
-### Analyzing the Bundle Size
+Run the backend and frontend in separate terminals.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Terminal 1 — Backend**
 
-### Making a Progressive Web App
+```bash
+node backend/index.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Terminal 2 — Frontend**
 
-### Advanced Configuration
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The frontend runs at `http://localhost:3000` and the backend at `http://localhost:5000`.
 
-### Deployment
+Ensure MongoDB is running locally before starting the backend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Project Structure
 
-### `npm run build` fails to minify
+```text
+iNotebook/
+├── backend/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── db.js
+│   └── index.js
+├── public/
+├── src/
+│   ├── components/
+│   └── context/
+├── .gitignore
+├── package.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Learning Outcomes
+
+This project helped me practice full-stack development, REST API integration, authentication, password hashing, database operations, and frontend-backend communication.
+
+## Author
+
+**Sanyam Jain**
+
+GitHub: [Sanyam-Jain234](https://github.com/Sanyam-Jain234)
