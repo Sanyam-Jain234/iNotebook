@@ -20,7 +20,7 @@ const Signup = () => {
         try {
 
             const response = await fetch(
-                "http://localhost:5000/api/auth/createuser",
+                `${process.env.REACT_APP_API_URL || "http://localhost:5000"}/api/auth/createuser`,
                 {
                     method: "POST",
                     headers: {
